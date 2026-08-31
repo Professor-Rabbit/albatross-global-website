@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Manrope", sans-serif;
+}
+
+:root {
+  --background: #F6F3EE; 
+  --foreground: #172A45; 
+  --card: #F6F3EE;
+  --card-foreground: #172A45;
+  --primary: #172A45; 
+  --primary-foreground: #F6F3EE;
+  --secondary: #EDE8E0; 
+  --secondary-foreground: #172A45;
+  --muted: #EDE8E0; 
+  --muted-foreground: #64748B; 
+  --accent: #4F8A8B;
+  --accent-foreground: #FFFFFF;
+  --border: #E2DCD0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.glass-nav {
+  background: rgba(246, 243, 238, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@keyframes pathDraw {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: pathDraw 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
